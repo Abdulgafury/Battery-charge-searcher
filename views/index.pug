@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div.col.s12#gmap(style="width=600px; height=400px")
+    
+    a#geo.btn.btn-floating.btn-large.waves-effect.waves-dark.white.tooltipped(data-position="left", data-tooltip="Find your location")
+      i.material-icons.dark.icon-color gps_fixed
+    a#all.btn.btn-floating.btn-large.waves-effect.waves-dark.white.tooltipped(data-position="left", data-tooltip="Show all places where you can charge your phone")
+      i.fab.fa-searchengin.icon-color
+    a#nearby.btn.btn-floating.btn-large.waves-effect.waves-dark.white.tooltipped(data-position="left", data-tooltip="Show nearby places where you can charge your phone")
+      i.fas.fa-street-view.icon-color
+    a#battery_level.btn.btn-floating.btn-large.waves-effect.waves-dark.white.tooltipped(data-position="left")
+      #battery-level-img
+    a#format_list_bulleted.btn.btn-floating.btn-large.waves-effect.waves-dark.white.modal-trigger.tooltipped.disabled(href='#formatListModal', data-position="left", data-tooltip="About places")
+      i.material-icons.icon-color format_list_bulleted
+
+
+    .preloader#page-preloader
+      .loader
+    #page-loading
+    #load
+        
+    #container_temp
+      h4 #name#
+      p.inline
+        i.far.fa-map.inline(style="color:#558b2f") 
+        p.inline #address#
+      p.inline
+        i.fas.fa-street-view.inline(style="color:#c62828")  
+        p.inline #distance#
+      p.inline
+        i.far.fa-calendar-alt.inline(style="color:#0277bd")  
+        p.inline #weekday_text#
+    #formatListModal.modal.bottom-sheet(style="width:100%; height:40%;")
+      #data_container
+ 
+         
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key="+ API_KEY + "&libraries=places&callback=initMap", type="text/javascript")
+    script(defer src='/javascripts/scripts/script.js')
+    script(defer src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js")
+    script(src='/javascripts/scripts/preloader.js')

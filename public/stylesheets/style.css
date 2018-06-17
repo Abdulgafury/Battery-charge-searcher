@@ -1,0 +1,86 @@
+body {
+	margin: 0;
+	height: 100%;
+	//overflow: hidden;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.btn {
+	margin: 20px;
+}
+
+.inline {
+  	display: inline-block;
+	margin: 2px;
+}
+#data_container {
+	padding: 16px 20% 16px;
+}
+#container_temp {
+	display: none;
+}
+.icon-color {
+	color: #000000 !important;
+}
+#battery-level-img {
+	margin: 5px auto;
+	width: 45px;
+	height: 45px;
+	background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 2;
+	transition: 1s all;
+	opacity: 1;
+	visibility: visible;
+}
+.preloader-done {
+	opacity: 0;
+	visibility: hidden;	
+}
+.preloader .loader {
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/loading.gif);
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.loading {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 2;
+	opacity: 0.5;
+	visibility: visible;
+}
+
+.load {
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/loading.gif);
+	background-size: cover;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	visibility: visible;
+	z-index: 2;
+}
